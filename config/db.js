@@ -6,7 +6,11 @@ const mongoose = require('mongoose');
 /**
  * CONEXAO COM A BASE
  */
-mongoose.connect(`mongodb+srv://${process.env.BR_USER}:${process.env.BD_PASS}@cluster0-340zy.mongodb.net/test?retryWrites=true`, {useNewUrlParser: true});
+
+const uri = `mongodb+srv://${process.env.BD_USER}:${process.env.BD_PASS}@cluster0-340zy.mongodb.net/test?retryWrites=true`;
+mongoose.connect(uri, {useNewUrlParser: true});
+//mongoose.connect('mongodb+srv://dbuser:dbuser@cluster0-340zy.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
+
 
 /**
  * EXIBICAO DO STATUS DE CONEXAO
