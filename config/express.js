@@ -3,6 +3,7 @@
  */
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 /**
  * INSTANCIACAO
@@ -12,6 +13,7 @@ const app = express();
 /**
  * MEDDLEWARE
  */
+app.use(cors());
 app.use(bodyParser.json());
 
 /**
