@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 /**
  * CONEXAO COM A BASE
  */
-mongoose.connect('mongodb://localhost:27017/projeto4', {useNewUrlParser: true});
+mongoose.connect(`mongodb+srv://${process.env.BR_USER}:${process.env.BD_PASS}@cluster0-340zy.mongodb.net/test?retryWrites=true`, {useNewUrlParser: true});
 
 /**
  * EXIBICAO DO STATUS DE CONEXAO
